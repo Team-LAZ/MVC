@@ -17,9 +17,9 @@ import java.io.InputStreamReader;
 public class MainActivity extends AppCompatActivity {
 
     Button btnClick;
-    TextView tv;
-    int clicks = 0;
-    String _clicks;
+    TextView tvClick;
+    int nClick = 0;
+    String sClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +27,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Click The Button");
 
-        btnClick = (Button) findViewById(R.id.btn_click);
-        tv = (TextView) findViewById(R.id.tv_clicks);
+        btnClick = (Button) findViewById(R.id.btnClick);
+        tvClick = (TextView) findViewById(R.id.tvClick);
 
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clicks++;
-                tv.setText("Clicked " + clicks + " Times");
+                nClick++;
+                tvClick.setText("Clicked " + nClick + " Times");
             }
         });
     }
@@ -65,11 +65,11 @@ public class MainActivity extends AppCompatActivity {
         File file = new File(getFilesDir(), "clicks.txt");
         FileOutputStream outputStream;
 
-        _clicks = String.valueOf(clicks);
+        sClick = String.valueOf(nClick);
 
         try {
             outputStream = openFileOutput("clicks.txt", Context.MODE_PRIVATE);
-            outputStream.write(_clicks.getBytes());
+            outputStream.write(sClick.getBytes());
             outputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,19 +85,19 @@ public class MainActivity extends AppCompatActivity {
             inputStream = openFileInput("clicks.txt");
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
 
-            char[] charBuffer = new char[1024];
-            String stringBuffer = "";
-            int charIndex;
+            char[] chBuffer = new char[1024];
+            String sBuffer = "";
+            int nIndex;
 
-            while ((charIndex = inputStreamReader.read(charBuffer)) > 0) {
-                String readString = String.copyValueOf(charBuffer, 0, charIndex);
-                stringBuffer += readString;
+            while ((nIndex = inputStreamReader.read(chBuffer)) > 0) {
+                String readString = String.copyValueOf(chBuffer, 0, nIndex);
+                sBuffer += readString;
             }
             inputStreamReader.close();
             inputStream.close();
 
-            clicks = Integer.parseInt(stringBuffer);
-            tv.setText("Clicked " + clicks + " Times");
+            nClick = Integer.parseInt(sBuffer);
+            tvClick.setText("Clicked " + nClick + " Times");
 
         } catch (Exception e) {
             e.printStackTrace();

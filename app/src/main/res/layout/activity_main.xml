@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        android:id="@+id/btn_click"
+        android:id="@+id/btnClick"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Clicked 0 Times"
-        android:id="@+id/tv_clicks"
-        android:layout_above="@+id/btn_click"
+        android:id="@+id/tvClick"
+        android:layout_above="@+id/btnClick"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
