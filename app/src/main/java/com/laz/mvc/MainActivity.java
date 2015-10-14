@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setTitle("Click The Button");
+        setTitle("MVC - LAZ");
 
         btnClick = (Button) findViewById(R.id.btnClick);
         tvClick = (TextView) findViewById(R.id.tvClick);
