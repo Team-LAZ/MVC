@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnClick;
+    Button btnClick, btnSend;
     TextView tvClick;
     int nClick = 0;
     String sClick;
@@ -28,15 +28,8 @@ public class MainActivity extends AppCompatActivity {
         setTitle("MVC - LAZ");
 
         btnClick = (Button) findViewById(R.id.btnClick);
+        btnSend = (Button) findViewById(R.id.btnSend);
         tvClick = (TextView) findViewById(R.id.tvClick);
-
-        btnClick.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nClick++;
-                tvClick.setText("Clicked " + nClick + " Times");
-            }
-        });
     }
 
     @Override
@@ -57,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void click(View view) {
+        nClick++;
+        tvClick.setText("Clicked " + nClick + " Times");
+    }
+
+    public void sendMessage(View view) {
+
     }
 
     public void save() {
