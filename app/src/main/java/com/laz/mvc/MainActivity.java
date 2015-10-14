@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button b;
+    Button btnClick;
     TextView tv;
     int clicks = 0;
     String _clicks;
@@ -27,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Click The Button");
 
-        b = (Button) findViewById(R.id.btn_click);
+        btnClick = (Button) findViewById(R.id.btn_click);
         tv = (TextView) findViewById(R.id.tv_clicks);
 
-        b.setOnClickListener(new View.OnClickListener() {
+        btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 clicks++;
