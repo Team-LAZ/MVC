@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".CreateAccountActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:ems="10"
+        android:id="@+id/etNewUsername"
+        android:layout_below="@+id/tvUsername"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etNewPassword1"
+        android:layout_below="@+id/tvPassword1"
+        android:layout_alignStart="@+id/etNewUsername" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etNewPassword2"
+        android:layout_below="@+id/tvPassword2"
+        android:layout_alignStart="@+id/etNewPassword1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Choose your username"
+        android:id="@+id/tvUsername"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Create a password"
+        android:id="@+id/tvPassword1"
+        android:layout_below="@+id/etNewUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Confirm your password"
+        android:id="@+id/tvPassword2"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/tvUsername" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:id="@+id/btnCreateAccount"
+        android:onClick="createAccount"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+</RelativeLayout>

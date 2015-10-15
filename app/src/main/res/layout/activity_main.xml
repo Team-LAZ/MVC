@@ -5,32 +5,41 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
-    <Button
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:id="@+id/btnClick"
-        android:layout_below="@+id/tvClick"
-        android:layout_centerHorizontal="true"
-        android:onClick="click" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Clicked 0 Times"
-        android:id="@+id/tvClick"
-        android:layout_marginTop="40dp"
+        android:inputType="textPersonName"
+        android:text="Username"
+        android:ems="10"
+        android:id="@+id/etUsername"
         android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/etPassword"
+        android:layout_marginTop="50dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:layout_below="@+id/etUsername"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Send"
-        android:id="@+id/btnSend"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:onClick="sendMessage" />
+        android:text="Login"
+        android:id="@+id/btnLogin"
+        android:onClick="login"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:id="@+id/btnGotoCreateAccount"
+        android:onClick="gotoCreateAccount"
+        android:layout_below="@+id/btnLogin"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
