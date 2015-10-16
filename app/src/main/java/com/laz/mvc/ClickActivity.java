@@ -24,7 +24,7 @@ public class ClickActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_click);
         setTitle("MVC - LAZ");
 
         btnClick = (Button) findViewById(R.id.btnClick);

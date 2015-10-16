@@ -12,7 +12,7 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     EditText etUsername, etPassword;
-    Button btnLogin, btnGotoCreateAccount;
+    Button btnLogin, btnCreateAccount;
     String sUser, sPass;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
-        btnGotoCreateAccount = (Button) findViewById(R.id.btnGotoCreateAccount);
+        btnCreateAccount = (Button) findViewById(R.id.btnCreateAccount);
     }
 
     @Override
@@ -33,16 +33,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
 
     public void login(View view) {
         sUser = etUsername.getText().toString();
         sPass = etPassword.getText().toString();
+
+        Intent intent = new Intent(getApplicationContext(), ClickActivity.class);
+        startActivity(intent);
+        setContentView(R.layout.activity_click);
     }
 
-    public void gotoCreateAccount(View view) {
+    public void createAccount(View view) {
         Intent intent = new Intent(getApplicationContext(), CreateAccountActivity.class);
         startActivity(intent);
         setContentView(R.layout.activity_createaccount);
